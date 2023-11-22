@@ -21,6 +21,8 @@ ComplexPlane::ComplexPlane(int pixelWidth, int pixelHeight)
     Set its primitive type to Points
     Resize it to pixelWidth* pixelHeight
     */
+    VertexArray Points;
+    Points.resize(pixelWidth*pixelHeight);
 }
 
 void ComplexPlane::draw(sf::RenderTarget& target, sf::RenderStates states) const
