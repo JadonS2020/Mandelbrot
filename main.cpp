@@ -6,9 +6,9 @@ int main()
     int height = VideoMode::getsDesktopMode().height;
     
     sf::Font font;
-	if (!font.loadFromFile("fonts/KOMIKAP_.ttf"))
-	{
-		cout << "Failed" << endl;
+    if (!font.loadFromFile("fonts/KOMIKAP_.ttf"))
+    {
+	cout << "Failed" << endl;
     }
 
     VideoMode vm(width, height);
@@ -16,20 +16,20 @@ int main()
     RenderWindow window(vm, "Mandelbrot", Style::Default);
 
     sf::Text text;
-	text.setFont(font);
+    text.setFont(font);
 
     ComplexPlane plane;
     State state;
 
     while (window.isOpen())
-	{
+    {
         if (Keyboard::isKeyPressed(Keyboard::Escape))
-		{
+	{
             window.close();
         }
 
         while (window.pollEvent(event))
-		{
+	{
             if (event.type == sf::Event::MouseButtonPressed)
             {
                 if (event.mouseButton.button == sf::Mouse::Right)
