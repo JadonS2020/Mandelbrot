@@ -11,6 +11,9 @@ const float BASE_ZOOM = 0.5;
 
 enum class State {CALCULATING, DISPLAYING};
 
+using namespace sf;
+using namespace std;
+
 class ComplexPlane : public sf::Drawable
 {
     private:
