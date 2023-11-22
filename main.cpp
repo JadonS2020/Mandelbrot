@@ -19,6 +19,7 @@ int main()
 	text.setFont(font);
 
     ComplexPlane plane;
+    State state;
 
     while (window.isOpen())
 	{
@@ -31,23 +32,38 @@ int main()
 		{
             if (event.type == sf::Event::MouseButtonPressed)
             {
-                    if (event.mouseButton.button == sf::Mouse::Right)
-                    {
-                        plane.zoomOut();
-                        plane.setCenter()
-                    }
+                if (event.mouseButton.button == sf::Mouse::Right)
+                {
+                    plane.zoomOut();
+                    plane.setCenter(sf::Vector2i(event.MouseButtonPressed.x, event.MouseButtonPressed.y));
+                    state = CALCULATING;
 
-                    if (event.mouseButton.button == sf::Mouse::Left)
-                    {
-                        plane.zoomIn
-                        plane.setCenter();
-                    }
+                }
+
+                if (event.mouseButton.button == sf::Mouse::Left)
+                {
+                    plane.zoomIn();
+                    plane.setCenter(sf::Vector2i(event.MouseButtonPressed.x, event.MouseButtonPressed.y));
+                    state = CALCULATING;
+                }
+
             }
 
             if (event.type == sf::Event::MouseMoved)
             {
-                
+                plane.setMouseLocation(sf::Vector2i(event.MouseMoved.x, event.MouseMoved.y));
             }
+
+            //update plane segment
+            plane.updateRender();
+            plane.loadText();
+
+            //update scene segment
+            window.clear();
+            window.draw(plane, state);
+            window.draw(text, state);
+            window.display();
+
         }
     }
 
