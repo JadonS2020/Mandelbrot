@@ -2,8 +2,8 @@
 
 int main()
 {
-    VideoMode::getDesktopMode().width;
-    VideoMode::getsDesktopMode().height;
+    int width = VideoMode::getDesktopMode().width;
+    int height = VideoMode::getsDesktopMode().height;
     
     sf::Font font;
 	if (!font.loadFromFile("fonts/KOMIKAP_.ttf"))
@@ -11,7 +11,7 @@ int main()
 		cout << "Failed" << endl;
     }
 
-    VideoMode vm(1920, 1080);
+    VideoMode vm(width, height);
 
     RenderWindow window(vm, "Mandelbrot", Style::Default);
 
