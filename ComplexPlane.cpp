@@ -10,9 +10,9 @@ ComplexPlane::ComplexPlane(int pixelWidth, int pixelHeight)
     Our object needs to know this so the plane is not distorted
     */
 
-    m_plane_center = {0,0};
-    m_plane_size = {BASE_WIDTH, BASE_HEIGHT * m_aspectRatio};
-    m_zo0mCount = 0;
+    m_plane_center = { 0,0 };
+    m_plane_size = { BASE_WIDTH, BASE_HEIGHT * m_aspectRatio };
+    m_zoomCount = 0;
 
 
     /*
@@ -23,14 +23,18 @@ ComplexPlane::ComplexPlane(int pixelWidth, int pixelHeight)
     */
 }
 
-void ComplexPlane::draw(RenderTarget& target, RenderStates states) const
+void ComplexPlane::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
     target.draw(m_vArray);
 }
 
-void complexPlane::updateRender()
+void ComplexPlane::updateRender()
 {
-    if (m_State = CALCULATING)
+}
+
+void ComplexPlane::updateRender()
+{
+    if (m_State = State::CALCULATING)
     {
 
     }
@@ -42,47 +46,47 @@ void ComplexPlane::zoomIn()
     m_zoomCount++;
     x = BASE_WIDTH * (pow(BASE_ZOOM, m_zoomCount));
     y = BASE_HEIGHT * m_aspectRatio * (pow(BASE_ZOOM, m_zoomCount));
-    m_plane_size = {x,y};
-    m_State = CALCULATING;
+    m_plane_size = { x,y };
+    m_State = State::CALCULATING;
 
 }
-
 void ComplexPlane::zoomOut()
 {
     double x, y;
     m_zoomCount--;
     x = BASE_WIDTH * (pow(BASE_ZOOM, m_zoomCount));
     y = BASE_HEIGHT * m_aspectRatio * (pow(BASE_ZOOM, m_zoomCount));
-    m_plane_size = {x,y};
-    m_State = CALCULATING;
+    m_plane_size = { x,y };
+    m_State = State::CALCULATING;
 }
 
-void ComplexPlane::setCenter(Vector2i mousePixel)
+void ComplexPlane::setCenter(sf::Vector2i mousePixel)
+{
+
+
+}
+
+void ComplexPlane::setMouseLocation(sf::Vector2i mousePixel)
 {
 
 }
 
-void ComplexPlane::setMouseLocation(Vector2i mousPixel)
+void ComplexPlane::loadText(sf::Text& text)
 {
 
 }
 
-void ComplexPlane::loadText(Text& text)
+int ComplexPlane::countIterations(sf::Vector2f coord)
 {
 
 }
 
-size_t ComplexPlane::countIterations(Vector2f coord)
+void ComplexPlane::iterationsToRGB(size_t count, sf::Uint8& r, sf::Uint8& g, sf::Uint8& b)
 {
 
 }
 
-void ComplexPlane::iterationsToRGB(size_t count, Uint8& r, Uint8& g, Uint8& b)
-{
-
-}
-
-Vector2f ComplexPlane::mapPixelToCoords(Vector2i mousePixel)
+sf::Vector2f ComplexPlane::mapPixelToCoords(sf::Vector2i mousePixel)
 {
 
 }
