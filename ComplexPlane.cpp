@@ -30,6 +30,7 @@ void ComplexPlane::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 void ComplexPlane::updateRender()
 {
+    
 }
 
 void ComplexPlane::updateRender()
@@ -62,8 +63,8 @@ void ComplexPlane::zoomOut()
 
 void ComplexPlane::setCenter(sf::Vector2i mousePixel)
 {
-
-
+    m_plane_size = { 1, 1 };
+    m_State = State::DISPLAYING;
 }
 
 void ComplexPlane::setMouseLocation(sf::Vector2i mousePixel)
