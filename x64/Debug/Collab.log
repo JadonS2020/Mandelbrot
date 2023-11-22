@@ -1,0 +1,23 @@
+﻿  ComplexPlane.cpp
+C:\Users\addha\source\repos\Collab\ComplexPlane.cpp(35,20): error C2084: function 'void ComplexPlane::updateRender(void)' already has a body
+C:\Users\addha\source\repos\Collab\ComplexPlane.cpp(31,20): message : see previous definition of 'updateRender'
+C:\Users\addha\source\repos\Collab\ComplexPlane.cpp(49,22): error C2398: Element '1': conversion from 'double' to 'T' requires a narrowing conversion
+          with
+          [
+              T=float
+          ]
+C:\Users\addha\source\repos\Collab\ComplexPlane.cpp(49,24): error C2398: Element '2': conversion from 'double' to 'T' requires a narrowing conversion
+          with
+          [
+              T=float
+          ]
+C:\Users\addha\source\repos\Collab\ComplexPlane.cpp(59,22): error C2398: Element '1': conversion from 'double' to 'T' requires a narrowing conversion
+          with
+          [
+              T=float
+          ]
+C:\Users\addha\source\repos\Collab\ComplexPlane.cpp(59,24): error C2398: Element '2': conversion from 'double' to 'T' requires a narrowing conversion
+          with
+          [
+              T=float
+          ]

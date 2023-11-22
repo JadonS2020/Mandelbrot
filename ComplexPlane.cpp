@@ -13,7 +13,7 @@ ComplexPlane::ComplexPlane(int pixelWidth, int pixelHeight)
     m_plane_center = { 0,0 };
     m_plane_size = { BASE_WIDTH, BASE_HEIGHT * m_aspectRatio };
     m_zoomCount = 0;
-
+    
 
     /*
     Initialize VertexArray
@@ -34,7 +34,7 @@ void ComplexPlane::updateRender()
 
 void ComplexPlane::updateRender()
 {
-    if (m_State = State::CALCULATING)
+    if (m_State == State::CALCULATING)
     {
 
     }
@@ -70,7 +70,6 @@ void ComplexPlane::setMouseLocation(sf::Vector2i mousePixel)
 {
 
 }
-
 void ComplexPlane::loadText(sf::Text& text)
 {
 
@@ -78,7 +77,7 @@ void ComplexPlane::loadText(sf::Text& text)
 
 int ComplexPlane::countIterations(sf::Vector2f coord)
 {
-
+    
 }
 
 void ComplexPlane::iterationsToRGB(size_t count, sf::Uint8& r, sf::Uint8& g, sf::Uint8& b)
