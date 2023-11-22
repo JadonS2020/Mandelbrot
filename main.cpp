@@ -53,9 +53,10 @@ int main()
             {
                 plane.setMouseLocation(sf::Vector2i(event.MouseMoved.x, event.MouseMoved.y));
             }
-
-            //update plane segment
-            plane.updateRender();
+        }
+	    
+	    //update plane segment
+	    plane.updateRender();
             plane.loadText();
 
             //update scene segment
@@ -63,8 +64,6 @@ int main()
             window.draw(plane, state);
             window.draw(text, state);
             window.display();
-
-        }
     }
 
     return 0;
